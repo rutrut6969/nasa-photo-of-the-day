@@ -27,8 +27,8 @@ function ImageTitle(props) {
 
   return (
     <TitleWrap>
-      <p className='title'>{title},</p>
-      <p className='date'> {absDate}</p>
+      <p className='title'>Title: {title},</p>
+      <p className='date'>Date: {absDate}</p>
     </TitleWrap>
   );
 }

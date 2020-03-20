@@ -54,7 +54,10 @@ function Image() {
   const [copy, setCopy] = useState('');
   const [hdUrl, setHdUrl] = useState('');
   const [inVal, setInVal] = useState('');
-
+  const [dateArr, setDateArr] = useState([]);
+  const day = document.querySelector('.day');
+  const month = document.querySelector('.month');
+  const year = document.querySelector('.year');
   //   console.log(image);
   useEffect(() => {
     axios
@@ -73,7 +76,8 @@ function Image() {
       .catch(err => console.log('Your error: ', err));
   }, []);
   function click() {
-    setInVal(date.value);
+    setDateArr([year.value]);
+    console.log(dateArr);
   }
   const Wrap = styled.div`
   background-image: url('${image}');
@@ -89,8 +93,8 @@ function Image() {
 `;
   const HeadWrap = styled.section`
     display: flex;
-    margin-top: -3%;
-    margin-bottom: 20%;
+    margin-top: 3%;
+    margin-bottom: 10%;
   `;
 
   return (
